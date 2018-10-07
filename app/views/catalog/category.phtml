@@ -1,0 +1,12 @@
+<h3><?php echo $category_name; ?></h3>
+<ul>
+
+  <?php foreach (CategoryProducts::getCategoryProducts($category_id) as $product){ ?>
+    <li>
+      <?php
+        // $product = Products::findFirst($product_id);
+        echo $product->name;
+      ?>
+    </li>
+  <?php } ?>
+</ul>

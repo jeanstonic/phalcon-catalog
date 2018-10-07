@@ -1,0 +1,15 @@
+category list: <br />
+<ul>
+  <?php
+  foreach(Categories::getAllCategories() as $category){
+    ?> <li>
+      <?php
+      echo $this->tag->linkTo(
+        'catalog/category/' . $category->id,
+        $category->name
+      ); ?>
+    </li>
+  <?php } ?>
+</ul>
+<hr>
+<?php echo $this->getContent(); ?>

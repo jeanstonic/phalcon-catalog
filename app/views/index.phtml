@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test product catalog</title>
+  </head>
+  <body>
+    <div class="container" style="max-width: 900px; padding: 15px; margin: auto;">
+
+      <h1>Product catalog</h1>
+
+      <?php echo $this->getContent(); ?>
+
+      <hr>
+      <footer>
+        <?php
+        echo $this->tag->linkTo(
+          '',
+          'home'
+        );
+        ?>
+      </footer>
+    </div>
+
+  </body>
+</html>
