@@ -1,0 +1,26 @@
+<h3>Add new products</h3>
+
+<?php echo $this->tag->form('add/product') ?>
+
+	<p>
+		<label for="name">Name</label>
+		<?php echo $this->tag->textField("name") ?>
+	</p>
+
+  <?php foreach(Categories::getAllCategories() as $category){ ?>
+    <p>
+      <?php echo $this->tag->checkField(   [
+        "categories[]",
+        "value" => $category->id,
+        ]) ?>
+      <label for="name"><?php echo $category->name; ?></label>
+      </p>
+  <?php } ?>
+
+	<p>
+		<?php echo $this->tag->submitButton("Add") ?>
+	</p>
+
+</form>
+
+<?php echo $this->getContent(); ?>

@@ -1,0 +1,16 @@
+<h3>Add new category</h3>
+
+<?php echo $this->tag->form('add/category') ?>
+
+	<p>
+		<label for="name">Name</label>
+		<?php echo $this->tag->textField("name") ?>
+	</p>
+
+	<p>
+		<?php echo $this->tag->submitButton("Add") ?>
+	</p>
+
+</form>
+
+<?php echo $this->getContent(); ?>
