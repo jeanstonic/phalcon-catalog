@@ -11,26 +11,15 @@ INSERT INTO products (name) VALUES ('one'), ('two'), ('three'), ('four'), ('five
 CREATE TABLE categories (
 	id int(5) NOT NULL AUTO_INCREMENT,
     name varchar(70) NOT NULL,
-    parent_category_id int(5),
     PRIMARY KEY (id)
 );
 
 INSERT INTO categories (name, parent_category_id) VALUES ('number', NULL), ('even', 1), ('odd', 1), ('prime', 1), ('composite', 1);
 
-CREATE TABLE sub_categories (
-	  id int(5) NOT NULL AUTO_INCREMENT,
-    parent_category_id int(5) NOT NULL,
-    child_category_id int(5) NOT NULL,
-    PRIMARY KEY (id)
-);
-
-INSERT INTO sub_categories (parent_category_id, child_category_id) VALUES (1, 2), (1, 3), (1, 4), (1, 5);
 
 CREATE TABLE category_products (
-      id int(5) NOT NULL AUTO_INCREMENT,
       category_id int(5) NOT NULL,
       product_id int(5) NOT NULL,
-      PRIMARY KEY (id)
 );
 
 INSERT INTO category_products (category_id, product_id) VALUES (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6),
